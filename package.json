@@ -1,0 +1,24 @@
+{
+  "name": "sflo",
+  "module": "src/index.tsx",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "assemblyscript": "^0.28.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "scripts": {
+    "asbuild": "bun build-asc.ts",
+    "test": "node --test",
+    "cli": "src/index.tsx"
+  }
+}
