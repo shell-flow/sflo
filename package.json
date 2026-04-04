@@ -19,6 +19,9 @@
   "scripts": {
     "asbuild": "bun build-asc.ts",
     "test": "node --test",
-    "cli": "src/index.tsx"
+    "cli": "src/index.ts"
+  },
+  "dependencies": {
+    "cac": "^7.0.0"
   }
 }
