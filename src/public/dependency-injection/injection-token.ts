@@ -4,7 +4,7 @@ export class InjectionToken<T> {
   private readonly _symbol: symbol;
   private readonly _description: string;
 
-  constructor(description: string){
+  constructor(description: string) {
     this._description = description;
     this._symbol = Symbol(description);
   }
@@ -17,4 +17,3 @@ export class InjectionToken<T> {
     return `InjectionToken(${this._description})`;
   }
 }
-
