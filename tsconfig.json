@@ -2,7 +2,8 @@
   "compilerOptions": {
     // Environment setup & latest features
     "lib": [
-      "ESNext"
+      "ESNext",
+      "dom"
     ],
     "target": "ESNext",
     "module": "Preserve",
@@ -20,18 +21,35 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+    "experimentalDecorators": true,
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
     "paths": {
       "@wasm/*": [
-        "./wasm/*.js"
+        "./wasm/*.js",
+      ],
+      "@public/*": [
+        "./src/public/*.ts"
+      ],
+      "@internal/*": [
+        "./src/internal/*.ts"
       ]
-    }
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src",
+      "./wasm"
+    ]
   },
   "include": [
     "src/**/*",
+    "src/**/*.d.ts",
     "wasm/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
